@@ -23,10 +23,12 @@ public class Ex6 {
 		}
 		System.out.println("\nVetor de números pares: ");
 		for(int i = 0; i < vetP.length; i++){
+			if(vetP[i] != 0)
 			System.out.print(vetP[i]+" | ");
 		}
 		System.out.println("\nVetor de números impares: ");
 		for(int i = 0; i < vetI.length; i++){
+			if(vetI[i] != 0)
 			System.out.print(vetI[i]+" | ");
 		}
 
