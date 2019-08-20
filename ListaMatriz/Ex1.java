@@ -59,6 +59,7 @@ public class Ex1 {
 				}
 			}
 			
+			try{
 			FileWriter arquivo = new FileWriter("C:/Users/c.agronomia/Documents/Matriz.txt");
 			PrintWriter gravarArquivo = new PrintWriter(arquivo);
 			
@@ -98,9 +99,14 @@ public class Ex1 {
 					}
 				}
 			}
-			System.out.println("Arquivo gravado com sucesso!");
 			arquivo.close();
 			entrada.close();
+			} catch(IOException e) {
+				System.out.println("Erro na gravação do arquivo"+
+				e.getMessage());
+			}
+			System.out.println("Arquivo gravado com sucesso!");
+			
 	}
 
 }
