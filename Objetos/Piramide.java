@@ -46,7 +46,7 @@ public class Piramide {
 	}
 	
 	public double volume() {
-		return (areaQuadrado()/3) * A1();
+		return (areaQuadrado()/3) * h;
 	}
 	
 	public double litrosTinta() {
