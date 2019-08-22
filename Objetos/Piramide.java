@@ -68,5 +68,38 @@ public class Piramide {
 		}
 		return preco;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Piramide [ab=");
+		builder.append(ab);
+		builder.append(", h=");
+		builder.append(h);
+		builder.append(", tipoTinta=");
+		builder.append(tipoTinta);
+		builder.append(", A1()=");
+		builder.append(A1());
+		builder.append(", areaTriangulo()=");
+		builder.append(areaTriangulo());
+		builder.append(", areaQuadrado()=");
+		builder.append(areaQuadrado());
+		builder.append(", areaTotal()=");
+		builder.append(areaTotal());
+		builder.append(", volume()=");
+		builder.append(volume());
+		builder.append(", litrosTinta()=");
+		builder.append(litrosTinta());
+		builder.append(", latasTinta()=");
+		builder.append(latasTinta());
+		builder.append(", valorTinta()=");
+		builder.append(valorTinta());
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+	
+	
 	
 }
