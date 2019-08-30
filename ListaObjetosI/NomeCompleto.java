@@ -1,22 +1,22 @@
-package ListaObjetosI;
+package ListaObjetos;
 
 public class NomeCompleto {
-
 	private String nome;
 	private String sobrenome;
-	
+
 	public NomeCompleto() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
-	public void nome(String nome) {
+	public void nomeCompleto(String nome, String sobrenome) {
 		this.nome = nome;
-	}
-	
-	public void sobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}
 	
+	public void mostraNome() {
+		System.out.println("Seu nome completo é: "+nome+" "+sobrenome+".");
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -32,9 +32,6 @@ public class NomeCompleto {
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}
-
-
-	
 	
 	
 }
