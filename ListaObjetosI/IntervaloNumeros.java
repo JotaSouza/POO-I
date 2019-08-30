@@ -1,23 +1,29 @@
-package ListaObjetosI;
+package ListaObjetos;
 
 public class IntervaloNumeros {
-
-	private int num1 = 0;
-	private int num2 = 0;
-	private int aux = 0;
+	private int num1 = 0, num2 = 0;
 	
 	public IntervaloNumeros() {
 		
 	}
 	
-	public void inverteNumeros() {
+	public void recebeNumeros(int num1, int num2) {
 		if(num1 > num2) {
-			aux = num1;
-			num1 = num2;
-			num2 = aux;
-			System.out.println("O segundo número informado é menor que o primeiro! \nFazendo inversão. ");				
+			System.out.println("\nPrimeiro número informado é maior que o segundo!"
+					+ "\nFazendo a inversão");
+			int aux = num2;
+			num2 = num1;
+			num1 = aux;
 		}
-		System.out.print("\nNúmeros entre o intervalo "+num1+" e "+num2+" \n| ");
+		
+		this.num1 = num1;
+		this.num2 = num2;
+		
+	}
+	
+	public void mostraIntervalo() {
+		recebeNumeros(getNum1(), getNum2());
+		System.out.println("\nOs números que constam no intervalo entre os números informados são: ");
 		for(int i = num1 + 1; i < num2; i++) {
 			System.out.print(i+" | ");
 		}
@@ -38,7 +44,7 @@ public class IntervaloNumeros {
 	public void setNum2(int num2) {
 		this.num2 = num2;
 	}
+	
+	
 
-	
-	
 }
