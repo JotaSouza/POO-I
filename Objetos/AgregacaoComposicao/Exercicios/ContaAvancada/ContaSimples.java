@@ -13,9 +13,13 @@ public class ContaSimples extends ContaBancaria {
 	}
 	
 	public boolean depositoPoupança(double valor){
-		return false;
+		if(valor > 0)
+			saldoPoupança = saldoPoupança + valor;
+		    return true;
 	}
 	public boolean sequePoupança(double valor){
+		if (saldoPoupança > valor)
+		saldoPoupança = saldoPoupança - valor;
 		return false;
 	}
 
