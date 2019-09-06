@@ -18,6 +18,7 @@ public class ContaEspecial extends ContaBancaria {
 		return limite;
 	}
 	public void setLimite(double limite) {
+		if(limite >= 0)
 		this.limite = limite;
 	}
 	public CartaoDeCredito getCartao() {
