@@ -56,13 +56,15 @@ public class ContaBancaria {
 	}
 	
 	public boolean deposito(double valor){
-		
-		return false;	
+		if(valor > 0)
+			saldo = saldo + valor;
+			return true;	
 	}
 	
 	public boolean saque(double valor){
-		
-		return false;	
+		if (saldo >= valor)
+		 saldo = saldo - valor;
+		 return true;	
 	}
 
 	@Override
