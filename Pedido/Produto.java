@@ -7,6 +7,13 @@ public class Produto {
 	private double valor;
 	private int quantidade;
 	
+	public Produto(int codigo, String descricao, double valor, int quantidade ) {
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.valor = valor;
+		this.quantidade = quantidade;
+	}
+	
 	public int getCodigo() {
 		return codigo;
 	}
