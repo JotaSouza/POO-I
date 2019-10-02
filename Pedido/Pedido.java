@@ -1,6 +1,7 @@
 package Pedido;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Pedido extends Operacao {
@@ -8,11 +9,12 @@ public class Pedido extends Operacao {
 	private int codigo;
 	protected Vendedor vendedor;
 	protected Cliente cliente;
-	private ArrayList<Produto> listaProdutos;
+	private List<Produto> listaProdutos = new ArrayList<Produto>();
 	
-	public Pedido() {
-		listaProdutos = new ArrayList<>();
-	}
+	public Pedido(Date inicio, Date fim) {
+		super(inicio, fim);
+		//listaProdutos = new ArrayList<>();
+	}	
 	
 	public int getCodigo() {
 		return codigo;
@@ -32,10 +34,10 @@ public class Pedido extends Operacao {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	public ArrayList<Produto> getListaProdutos() {
+	public List<Produto> getListaProdutos() {
 		return listaProdutos;
 	}
-	public void setListaProdutos(ArrayList<Produto> listaProdutos) {
+	public void setListaProdutos(List<Produto> listaProdutos) {
 		this.listaProdutos = listaProdutos;
 	}
 	//verifica se produto já existe na lista
@@ -86,12 +88,22 @@ public class Pedido extends Operacao {
 	 }
 	 //
 	 public List<Produto> buscaProdutoDescricao(String descricao){
-		 String s = "abc";
-		 boolean b = s.startsWith("te");
-		return listaProdutos;
-		//criar o for para pegar na lista e comparar
-		 
+		 List<Produto> listaProdutoAuxiliar = new ArrayList<Produto>();
+		 for (Produto produtoList : listaProdutos) {
+				if(produtoList.getDescricao().startsWith(descricao)) {
+					listaProdutoAuxiliar.add(produtoList);
+				}
+			}
+		 return listaProdutoAuxiliar;
 	 }
+	 
+	 public int dias() {
+		 long inicio =getDataInicio().getTime();
+		 long fim = getDataFim().getTime();
+		 int dias = (int) ((((fim-inicio)/1000)/60)/60)/24;
+		 return dias;
+	 }
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
