@@ -48,4 +48,13 @@ public class ListaDatas {
 		
 	}
 	
+	public static double diferencaEmDias(Date dataInicial, Date dataFinal){
+		double result = 0;
+		long diferenca = dataFinal.getTime() - dataInicial.getTime();
+		double diferencaEmDias = (diferenca / 1000) /60 /60 /24;
+		long horasRestantes = (diferenca / 1000) /60 /60 %24;
+		result = diferencaEmDias + (horasRestantes / 24d);
+		return result;
+	}
+	
 }
