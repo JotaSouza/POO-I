@@ -7,6 +7,11 @@ public class Operacao {
 	private Date dataInicio;
 	private Date dataFim;
 	
+	public Operacao(Date inicio, Date fim) {
+		this.dataInicio = inicio;
+		this.dataFim = fim;
+	}
+	
 	public Date getDataInicio() {
 		return dataInicio;
 	}
