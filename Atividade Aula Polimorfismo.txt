@@ -1,0 +1,25 @@
+Criar uma classe chamada 
+Folha de pagamento:
+double valor
+double desconto;
+
+Metodo
+double salario liquido
+
+Classe Funcionário
+Tipos de funcionário;
+tipo 1 - estagiário
+tipo 2 - desenvolvedor
+tipo 3 - analista
+tipo 4 - gerente do projeto
+
+Se for:
+estagiário + 20% no ganho
+desenvolvedor + 10% no ganho
+analista 5% no ganho
+gerente 1% no ganho
+
+
+IMPORTANTE - LER E PESQUISAR SOBRE INJEÇÃO DE DEPENDENCIA.
+
+java permite criar metodos chamados default na interface(ler)
